@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>TUYỂN DỤNG</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .html,
+    body {
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    .navbar div {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 15px;
+        background-color: black;
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu div {
+        width: 150px;
+    }
+
+    .foot div {
+        float: left;
+        width: 40%;
+        margin: 30px;
+    }
+
+    .joinus {
+        background-image: url(img/banner_02.png);
+        background-color: #eee;
+        background-size: cover;
+        width: 100%;
+        height: 520px;
+    }
+
+    .joinus div {
+        border: solid 1px white;
+        color: white;
+        text-align: center;
+        padding: 0px 0px 40px 0px;
+    }
+
+    .button {
+        width: 100px;
+        height: 40px;
+        border: none;
+        background-color: #ffaa00;
+        border-radius: 50px;
+    }
+
+    .aboutus {
+        width: 100%;
+
+    }
+
+    .intro {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .intro div {
+        width: 320px;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .intro img {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .two {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .two div {
+        width: 320px;
+        text-align: center;
+    }
+
+    .two img {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .mySlides {
+        display: none
+    }
+    .youbecom div{
+        float: left;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div>
+            <img style="background-color: black;width: 100px;" src="img/logo.png">
+        </div>
+        <div class="menu">
+            <div><a th:href="@{/trangchu}" style="color:#f2f2f2 ;text-decoration: none;">TRANG CHỦ</a></div>
+            <div><a th:href="@{/gioithieu}" style="color: #f2f2f2;text-decoration: none;">GIỚI THIỆU</a></div>
+            <div><a th:href="@{/tuyendung}" style="color: #ffaa00;text-decoration: none;">TUYỂN DỤNG</a></div>
+            <div><a th:href="@{/lienhe}" style="color:#f2f2f2 ;text-decoration: none;">LIÊN HỆ</a></div>
+            
+        </div>
+        <div>
+            <button class="button"
+                style="border: none; border-radius: 1px; background-color: grey; color: white;width: 120px; height: 30px;margin-top: 10px;">
+                TIẾNG VIỆT
+            </button>
+        </div>
+    </div>
+    <div class="joinus">
+        <div style="width: 100%; height: 100px;border: none;"></div>
+        <div style="margin-right: 100px; margin-left: 100px;">
+            <h1 style="font-size: 50px;">CƠ HỘI NGHỀ NGHIỆP</h1>
+            <h2 style="font-size: 30px;">Cùng Zego vươn ra tầm Thế giới!</h2>
+            <button
+                style="color: white; width: 200px;height: 50px;font-size: 20px;margin-top: 30px;background-color: #ffaa00;border: none;">JOIN
+                US</button>
+        </div>
+    </div>
+    <div class="aboutus">
+        <h1 style="text-align: center;margin-top: 100px;">Zego đem lại cho bạn những gì?</h1>
+        <div class="intro">
+            <div>
+                <img src="img/tuyendung_icon1.png">
+                <h1>Môi trường</h1>
+                <p>Trẻ trung, nhiệt huyết, thoải mái.
+                    Văn phòng đẹp, chế độ tốt, đãi ngộ cao</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon2.png">
+                <h1>Kiến thức</h1>
+                <p>Phát triển chuyên môn giỏi.
+                    Được tiếp cận và đào tạo nhiều kiến thức khác</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon3.png">
+                <h1>Cơ hội phát triển</h1>
+                <p>Bạn có thể trở thành bất cứ ai, ở bất cứ vị trí nào, và đạt được bất kỳ mong muốn nào</p>
+            </div>
+        </div>
+        <h1 style="text-align: center;">Bạn sẽ trở thành một Zego?</h1>
+        <div class="intro">
+            <div>
+                <img src="img/trangchu_icon4.png">
+                <p>Bạn có chí hướng, mục tiêu cá nhân và thực sự khát khao đạt được mục tiêu đó</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon5.png">
+                <p>Bạn luôn mong muốn được phát triển bản thân mình, luôn muốn nâng tầm mình hơn</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon6.png">
+                <p>Bạn là người có trách nhiệm, sự chủ động, và nhiệt huyết trong công việc, biết chịu trách nhiệm, nhận
+                    sai và sửa sai</p>
+            </div>
+        </div>
+        <div class="two">
+            <div>
+                <img src="img/tuyendung_icon7.png">
+                <p>Bạn có khả năng tìm hiểu, học hỏi nhanh, kiên trì, tương tác tốt, mong muốn tạo dựng thành công cùng
+                    1 team</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon8.png">
+                <p>Sẵn sàng loại bỏ thói quen, suy nghĩ cũ, biết thích nghi, học hỏi những cái mới để tạo sự đột phá</p>
+            </div>
+            <div>
+                <img src="img/tuyendung_icon9.png">
+                <p>Nếu công ty ghi nhận đúng, nếu bạn được trao cơ hội, nếu công ty fair với bạn, bạn sẽ gắn bó lâu dài
+                    với công ty?</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1 style="text-align: center; margin-top: 100px;">Cuộc sống tại Zego như thế nào?</h1>
+            <div class="containslide" style="margin-top: 50px; margin-bottom: 50px;">
+                <div class="imagesbox">
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/iguana.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="img/1.jpg" alt=""
+                                border="0">
+                        </a>
+                    </div>
+
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/iguana.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="img/2.jpg" alt="" border="0">
+                        </a>
+                    </div>
+
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/default.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="img/3.jpg" alt="" border="0">
+                        </a>
+                    </div>
+
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/thunderstorm.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="img/4.jpg" alt=""
+                                border="0">
+                        </a>
+                    </div>
+
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/snow.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="img/5.jpg" alt="" border="0">
+                        </a>
+                    </div>
+
+                    <div class="box_ppt_thumb">
+                        <a href="http://test.ionelcostel.eu/imgs/rain.jpg" rel="imagegallery" class="ig">
+                            <img class="pptthumb" src="http://test.ionelcostel.eu/imgs/rain.jpg" alt="" border="0">
+                        </a>
+                    </div>
+
+
+                </div>
+                <button class="img-slide-nav img-slide-nav-left" onclick="prev1()">&#10094;</button>
+                <button class="img-slide-nav img-slide-nav-right" onclick="next1()">&#10095;</button>
+
+            </div>
+            <div class="youbecome">
+                <div style="width: 40%;">
+                    <img src="img/you_become.png" style="width: 500px;height: 350px;margin: 50px;"/>
+                </div>
+                <div style="width: 40%; margin-left: 700px;margin-top: -350px;margin-bottom: 150px;">
+                    <h4>Nếu có ai đó hỏi tôi có hối hận khi vào iKame không? Tôi sẽ nói rằng, tôi chỉ hối hận vì đã không đến nơi này sớm hơn!</h4>
+                    <img src="img/av-02_ayrt.jpeg" style="width: 100px; height: 100px;border-radius: 100%;margin-top: 20px;"></br>
+                    <h4 style="margin-top: -80px; margin-left: 150px;">CHU MANH TIEN</br>PROJECT MANAGER</h4>
+                    <button style="width: 150px;border: none; background-color: #ffaa00; border-radius: 30px;color: white;height: 50px;font-size: 20px; margin-top: 100px;">JOIN US</button>
+                </div>
+            </div>
+            <div style="width: 100%;background-color:beige;height: 200px;padding-top: 20px;">
+                <h1 style="font-size: 40px;opacity: 0.5;text-align: center;">Ngay lúc này, cảm nhận của bạn về Zego như
+                    thế nào?</h1>
+                <h1 style="font-size: 40px;text-align: center;">Đừng bỏ lỡ những cơ hội dưới đây!</h1>
+            </div>
+        </div>
+        <div class="foot" style="width: 100%; background-color: black;height: 530px;">
+            <div style="color: white;">
+                <img style="background-color: black;width: 100px;" src="img/logo.png">
+                <h1>ZEGO GLOBAL CO., LTD.</h1>
+                <p>Tầng 10, Tòa nhà Peak View, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+                <p> info@zegostudio.com</p>
+                <p>0948 147 999</p>
+                 <a href="https://www.facebook.com/Zego-Global-114890267305601" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;margin-right: 10px;"><i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCa3exD52ixc5FSVMuo3XYxw/featured" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;"><i class="fa fa-youtube-play" style="font-size: 30px;"></i></a>
+            </div>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7838.684254869503!2d106.70676642475235!3d10.785086936675276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1547181657956"
+                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script th:src="@{js/script.js}"></script>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-red", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-red";
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.containslide{
+    width: 100%;
+   
+    overflow: hidden;
+}
+
+
+
+.imagesbox{
+white-space: nowrap;
+overflow: hidden;
+margin-left: -25%;
+margin-right: -25%;
+}
+.imagesbox a{
+	display: inline-block;
+}
+.imagesbox img{
+	width: 100%;
+  cursor: zoom-in;
+}
+
+	.imagesbox .box_ppt_thumb {
+		display: none;
+		width: 33%;
+        box-sizing: border-box;
+        border-left: 2px solid transparent;
+        float: left;
+
+	}
+    .imagesbox .box_ppt_thumb:nth-child(1),
+    .imagesbox .box_ppt_thumb:nth-child(2),
+    .imagesbox .box_ppt_thumb:nth-child(3){
+        display: inline-block;
+    }
+
+    .containslide{
+        position: relative;
+    }
+    .img-slide-nav {
+    position: absolute;
+    top: 40%;
+        background: transparent;
+    border: none;
+    color: #fff;
+    outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+        width: 7vw;
+    height: 7vw;
+    font-size: 4vw;
+}
+@media (max-width: 767px) {
+
+.img-slide-nav {
+  background: rgba(0,0,0,0.1);
+  }
+}
+.img-slide-nav-left {
+    left: 20px;
+    transition: left 0.4s ease-in-out;
+}
+.img-slide-nav-right {
+    right: 20px;
+    transition: right 0.4s ease-in-out;
+}
+.img-slide-nav-left:hover{
+    left: 10px;
+}
+.img-slide-nav-right:hover{
+    right: 10px;
+}

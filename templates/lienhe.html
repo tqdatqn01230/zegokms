@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>LIÊN HỆ</title>
+</head>
+<style>
+    .html,
+    body {
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    .navbar div {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 15px;
+        background-color: black;
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu div {
+        width: 120px;
+    }
+    .foot div{
+        float: left;
+        width: 40%;
+        margin: 30px;
+    }
+    .bg_contact {
+        background-image: url(https://data-gcdn.basecdn.net/201909/sys857/hiring/23/12/56/05/41/07/f4/b07dcd17c11edda1b3214042fffa8103/56eec3adbe536025f58af54bc8849eca_513520_CSSTFAL9UMKK2.jpg);
+        width: 40%;
+        background-size: cover;
+        margin: 50px;
+        height: 400px;
+        color: white;
+        padding: 30px;
+    }
+    .contact div{
+        float: left;
+    }
+    .form {
+        width: 40%;
+        height: 500px;
+        text-align: center;
+    }
+    .form input{
+        width: 80%;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: solid grey 1px;
+        padding-left: 20px;
+    }
+    .form textarea{
+        width: 80%;
+        height: 80px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: solid grey 1px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div>
+            <img style="background-color: black;width: 100px;" th:src="@{/img/logo.png}">
+        </div>
+       <div class="menu">
+            <div><a th:href="@{/trangchu}" style="color:#f2f2f2 ;text-decoration: none;">TRANG CHỦ</a></div>
+            <div><a th:href="@{/gioithieu}" style="color: #f2f2f2;text-decoration: none;">GIỚI THIỆU</a></div>
+            <div><a th:href="@{/tuyendung}" style="color: #f2f2f2;text-decoration: none;">TUYỂN DỤNG</a></div>
+            <div><a th:href="@{/lienhe}" style="color:#ffaa00 ;text-decoration: none;">LIÊN HỆ</a></div>
+            
+        </div>
+        <div>
+            <button
+                style="border: none; border-radius: 1px; background-color: grey; color: white;width: 100px; height: 30px;margin-top: 10px;">
+                TIẾNG VIỆT
+            </button>
+        </div>
+    </div>
+    <div class="contact" style="margin: 50px 50px 50px 50px;">
+        <div class="bg_contact" style="padding-top: 100px;">
+            <h2>Địa chỉ</h2>
+            <h4>Tầng 10, Tòa nhà Peak View, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</h4>
+            <h2>Số điện thoại</h2>
+            <h4>0948147999</h4>
+            <h2>Email</h2>
+            <h4>info@zegostudio.com</h4>
+        </div>
+        <div class="form">
+            <h1>LIÊN HỆ</h1>
+            <form th:action="@{/sendMail}">
+            <input type="text" placeholder="Họ và tên" name="name"></br>
+            <input type="text" placeholder="Email" name="email"></br>
+            <input type="text" placeholder="Số điện thoại" name="phone"></br>
+            <input type="text" placeholder="Skype" name="skype"></br>
+            <textarea placeholder="Thông điệp" name="message"></textarea>
+            <button style="text-align: center;margin-left: auto;margin-right: auto;display: block;border-radius: 20px;border: none;width: 100px; height: 40px; background-color: #ffaa00;color: white;margin-top: 50px;" type="submit">GỞI</button>
+        	</form>
+        	<h4 th:text="${mess}"></h4>
+        </div>
+    </div>
+    <div class="foot" style="width: 100%; background-color: black;height: 530px;margin-top: 700px;">
+        <div style="color: white;">
+            <img style="background-color: black;width: 100px;" th:src="@{/img/logo.png}">
+            <h1>ZEGO GLOBAL CO., LTD.</h1>
+            <p>Tầng 10, Tòa nhà Peak View, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+            <p> info@zegostudio.com</p>
+            <p>0948 147 999</p>
+             <a href="https://www.facebook.com/Zego-Global-114890267305601" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;margin-right: 10px;"><i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCa3exD52ixc5FSVMuo3XYxw/featured" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;"><i class="fa fa-youtube-play" style="font-size: 30px;"></i></a>
+        </div>
+        <div>
+            <iframe src="https://maps.google.com/maps?q=Peak%20View%2C%2036%20Ho%C3%A0ng%20C%E1%BA%A7u%2C%20%C4%90%E1%BB%91ng%20%C4%90a%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vi%E1%BB%87t%20Nam&t=&z=17&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

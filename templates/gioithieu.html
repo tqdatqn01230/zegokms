@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIỚI THIỆU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .html,
+    body {
+        margin: 0;
+        line-height: 30px;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    .navbar div {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 15px;
+        background-color: black;
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu div {
+        width: 120px;
+    }
+    .foot div{
+        float: left;
+        width: 40%;
+        margin: 30px;
+    }
+    .noidung p{
+        font-size: 20px;
+    }
+    .noidung {
+        margin-top: 80px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div>
+            <img style="background-color: black;width: 100px;" src="img/logo.png">
+        </div>
+        <div class="menu">
+            <div><a th:href="@{/trangchu}" style="color:#f2f2f2 ;text-decoration: none;">TRANG CHỦ</a></div>
+            <div><a th:href="@{/gioithieu}" style="color: #ffaa00;text-decoration: none;">GIỚI THIỆU</a></div>
+            <div><a th:href="@{/tuyendung}" style="color: #f2f2f2;text-decoration: none;">TUYỂN DỤNG</a></div>
+            <div><a th:href="@{/lienhe}" style="color:#f2f2f2 ;text-decoration: none;">LIÊN HỆ</a></div>
+            
+        </div>
+        <div>
+            <button
+                style="border: none; border-radius: 1px; background-color: grey; color: white;width: 100px; height: 30px;margin-top: 10px;">
+                TIẾNG VIỆT
+            </button>
+        </div>
+    </div>
+    <div class="noidung">
+        <h1>Về chúng tôi</h1>
+        <p>Được thành lập vào năm 2014, Zego với những con người nhỏ có ước mơ lớn, và bắt đầu từ những việc nhỏ. Trải qua 8 năm chúng tôi cũng đã cán được nhiều cột mốc, nhân sự phát triển lên gần 100 thành viên. Trong suốt quá trình đó chúng tôi luôn hướng tới sự nhiệt huyết, sáng tạo, trao cho nhau những giá trị, cùng nhau phát triển, cùng hưởng lợi ích, và đặc biệt luôn đặt "Con người" là trọng tâm của Công ty. </br>
+        </br>
+            Slogan của công ty là "JUST FOR YOU" </br>
+            1. Với anh em trong công ty: chế độ, quyền lợi, sự phát triển của anh em là số một, không phải lợi nhuận.
+        </br> 2. Với sản phẩm: người dùng là trên hết.
+    </br> 3. Với hợp tác: lợi ích của đối tác là kim chỉ nam.</p>
+            <img style="margin-left: auto;margin-right: auto;display: block;" th:src="@{/img/bg_aboutus.jpg}" />
+            <h1>Tầm nhìn</h1>
+            <p>Mục tiêu của Zego trong 5 năm tới là trở thành Global Game Studio đạt Top 1 Worldwide Downloads và Top 10 Worldwide Revenue. Đây là mục tiêu rất rất lớn, nhưng ko phải ước mơ hão huyền. Thời điểm hiện tại Zego Studio đã đứng Top 10 về download. Chúng tôi dám nghĩ lớn, đã và đang xây dựng theo mục tiêu này nhiều năm, có sự đầu tư mạnh tay, có kế hoạch chi tiết, có chiến lược tốt, có được sự hỗ trợ từ nhiều bên, có kinh nghiệm nhiều năm, nhưng vẫn cần thêm sự hỗ trợ từ phía bạn.</p>
+            <h1>Sứ mệnh</h1>
+            <h2>Nâng tầm - Chinh phục - Tạo giá trị </h2>
+            <p>Phát triển, nâng tầm anh em, cùng nhau chinh phục những mục tiêu lớn, ghi dấu ấn ở tất cả các mảng, đem lại giá trị cho các thành viên và xã hội</p>
+            <h1>Giá trị cốt lõi</h1>
+            <p>1. Con người: Với slogan là "JUST FOR YOU" và con người là số 1 sẽ:
+            </br> • Được tôn trọng.
+        </br> • Được lắng nghe.
+    </br>• Được xoá bỏ nỗi sợ.
+</br>• Được học hỏi, phát triển, nâng tầm.
+</br>• Được đối xử công bằng.
+</br> • Được ghi nhận và trao cơ hội.
+                
+</br>2.  Khát khao nâng tầm
+</br>• Luôn hướng tới mục tiêu cao hơn.
+</br> • Thúc đẩy sự phát triển.
+</br> • Nâng tầm bản thân.
+</br> • Nâng tầm team.
+</br>• Nâng tầm công ty.
+                
+</br>3. Sáng tạo mang tính đột phá
+</br> • Suy nghĩ sáng tạo.
+</br> • Chiến lược sáng tạo.
+</br>• Cách làm sáng tạo.
+</br>• Văn hóa sáng tạo.
+</br>• Kết quả đột phá.
+                
+</br>4. Cộng hưởng, cùng hưởng
+</br>• Cùng nhau hướng tới mục tiêu chung.
+</br>• Cùng nhau phát triển.
+</br> • Cùng nhau nâng tầm.
+</br> • Cùng nhau chinh phục, bứt phá.
+</br>  • Cùng nhau hưởng giá trị.
+                
+</br> 5. Dám đối mặt, không trốn tránh
+</br> • Đối mặt với vấn đề.
+</br> • Đối mặt với khó khăn.
+</br> • Đối mặt với sai lầm.
+</br> • Đối mặt với thất bại.
+</br>• Đối mặt với đồng nghiệp.
+                 </br>• Đối mặt với chính mình.</p>
+    </div>
+    <div class="foot" style="width: 100%; background-color: black;height: 530px;">
+        <div style="color: white;">
+            <img style="background-color: black;width: 100px;" th:src="@{/img/logo.png}">
+            <h1>ZEGO GLOBAL CO., LTD.</h1>
+            <p>Tầng 10, Tòa nhà Peak View, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+            <p> info@zegostudio.com</p>
+            <p>0948 147 999</p>
+             <a href="https://www.facebook.com/Zego-Global-114890267305601" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;margin-right: 10px;"><i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCa3exD52ixc5FSVMuo3XYxw/featured" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;"><i class="fa fa-youtube-play" style="font-size: 30px;"></i></a>
+        </div>
+        <div>
+            <iframe src="https://maps.google.com/maps?q=Peak%20View%2C%2036%20Ho%C3%A0ng%20C%E1%BA%A7u%2C%20%C4%90%E1%BB%91ng%20%C4%90a%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vi%E1%BB%87t%20Nam&t=&z=17&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

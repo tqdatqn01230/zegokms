@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="static/templates/css/bootstrap.min.css?v=1.1" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/templates/css/style.css?v=1.1"/>
+    <link rel="stylesheet" href="static/templates/css/jquery.fancybox.css?v=1.1"/>
+    <script type="text/javascript" src="static/templates/js/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="static/templates/js/tether.min.js" ></script>
+    <script type="text/javascript" src="static/templates/js/jquery.lazy.min.js" ></script>
+    <script type="text/javascript" src="static/templates/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="static/templates/js/app.js?v=1.1" ></script>
+    <script src="static/templates/js/jquery.fancybox.js?v=1.1" ></script>
+
+  <title>TRANG CHỦ</title>
+  <link rel="stylesheet" href="css/trangchu_style.css">
+
+</head>
+<style>
+  .html,
+  body {
+    margin: 0;
+    line-height: 30px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+  }
+
+  .navbar div {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px
+    }
+  }
+
+  .aboutus {
+    width: 100%;
+
+  }
+
+  .intro {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .intro div {
+    width: 320px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  .intro img {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .foot div {
+    float: left;
+    width: 40%;
+    margin: 30px;
+  }
+
+  .apple {
+    background-image: url(img/btn_ios.png);
+    width: 172px;
+    height: 52px;
+
+  }
+
+  .chplay {
+    background-image: url(img/btn_gp.png);
+    width: 172px;
+    height: 52px;
+
+  }
+  .news__title div{
+    float: left;
+    margin-left: 15px;
+  }
+  .mySlides {display:none;}
+</style>
+
+<body>
+  <div class="navbar">
+    <div>
+      <img style="background-color: black;width: 100px;" src="img/logo.png">
+    </div>
+    <div class="menu">
+            <div><a th:href="@{/trangchu}" style="color:#ffaa00 ;text-decoration: none;">TRANG CHỦ</a></div>
+            <div><a th:href="@{/gioithieu}" style="color: #f2f2f2;text-decoration: none;">GIỚI THIỆU</a></div>
+            <div><a th:href="@{/tuyendung}" style="color: #f2f2f2;text-decoration: none;">TUYỂN DỤNG</a></div>
+            <div><a th:href="@{/lienhe}" style="color:#f2f2f2 ;text-decoration: none;">LIÊN HỆ</a></div>
+        </div>
+    <div>
+      <button
+        style="border: none; border-radius: 1px; background-color: grey; color: white;width: 150px; height: 30px;margin-top: 10px;">
+        TIẾNG VIỆT
+      </button>
+    </div>
+  </div>
+  <div class="slideshow">
+
+    <div class="mySlides fade">
+      <img src="img/trangchu_1.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/trangchu_2.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/trangchu_3.jpg" style="width:100%">
+
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <div class="aboutus">
+    <h1 style="text-align: center;margin-top: 100px;">VỀ CHÚNG TÔI</h1>
+    <div class="intro">
+      <div>
+        <img src="img/trangchu_icon1.png">
+        <h1>Tầm nhìn</h1>
+        <p>Top 1 Global Studio về download sau 2 năm. Top 10 Global Studio về doanh thu sau 5 năm. Hoàn thiện Hệ
+          sinh thái đa mảng iKame sau 10 năm</p>
+      </div>
+      <div>
+        <img src="img/trangchu_icon2.png">
+        <h1>Sứ mệnh</h1>
+        <p>Nâng tầm - Chinh phục - Tạo giá trị</p>
+      </div>
+      <div>
+        <img src="img/trangchu_icon3.png">
+        <h1>Giá trị cốt lõi</h1>
+        <p>Con người - Khát khao nâng tầm - Sáng tạo mang tính đột phá - Cộng hưởng cùng hưởng - Dám đối mặt</p>
+      </div>
+    </div>
+    <button
+      style="text-align: center;margin-left: auto;margin-right: auto;display: block;border-radius: 20px;border: none;width: 150px; height: 40px; background-color: #ffaa00;color: white;margin-bottom: 50px;font-size: 18px;">ĐỌC
+      THÊM</button>
+  </div>
+  <div style="background-color: #bbb;">
+    <h1 style="text-align: center;padding-top: 80px;">Zego Studio</h1>
+    <p style="padding: 20px 200px 20px 200px;text-align: center;">Mong ước từ nhỏ của chúng tôi là được chơi Game và
+      làm Game. Và mong ước hiện tại của chúng tôi là được tạo ra những sản phẩm chất lượng, có nhiều người dùng,
+      và trở thành công ty Game hàng đầu trên thế giới. Với những thành viên đam mê, nhiệt huyết, giỏi và nhiều
+      kinh nghiệm. Cộng với tiềm lực hiện có chúng tôi tin rằng có thể biến ước mơ trên thành hiện thực.</p>
+    <div class="intro">
+      <div>
+        <img src="img/trangchu_icon4.png">
+        <h1>100+</h1>
+        <p>Zego Members</p>
+      </div>
+      <div>
+        <img src="img/trangchu_icon5.png">
+        <h1>+5M</h1>
+        <p>Daily Active Users</p>
+      </div>
+      <div>
+        <img src="img/trangchu_icon6.png">
+        <h1>+500M</h1>
+        <p>Total Users</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper" style="margin-bottom: 30px;">
+    <div class="item-bg"></div>
+    <div class="layout_0702">
+        <div class="container">
+            <div class="app_focus">
+                <div class="title_9 text-center text_color_1">Game nổi bật</div>
+                <div class="list_game_app">
+
+                    <div class="slider center mt-5">
+                        
+    <div class="d_block_app">
+        <div class="image">
+            <img src="https://zegostudio.com/static/upload/images/_thumbProject/icon_4.png" alt="" class="w-100">
+        </div>
+        <div class="info">
+            <h4 class="text-bold my-2 text_color_1">Farm City</h4>
+            <div class="mb-4 text-size-18 text_color_2">
+                Nuôi trồng, sản xuất, trở thành một nhà lãnh đạo để xây dựng thành phố của riêng bạn...
+            </div>
+            <div class="mx-auto div_flex" style="margin-left: - 30px;">
+                                    <a href="https://apps.apple.com/app/id1506635757?mt=8" target="_blank">
+                        <img src="static/templates/images/btn_ios.png" alt="" class="m_image_2 mx-1" style="width:130px">
+                    </a>
+                                                <a href="https://play.google.com/store/apps/details?id=com.citybay.farming.citybuilding" target="_blank">
+                    <img src="static/templates/images/btn_gp.png" alt="" class="m_image_2 mx-1 " style="width:130px" >
+                </a>
+                            </div>
+        </div>
+    </div>
+                        
+    <div class="d_block_app" th:each="game : ${gameList}">
+        <div class="image">
+            <img th:src="${game.linkImage}" alt="" class="w-100">
+        </div>
+        <div class="info">
+            <h4 class="text-bold my-2 text_color_1" th:text="${game.name}">Cooking Dream</h4>
+            <div class="mb-4 text-size-18 text_color_2" th:text="${game.desc}">
+                
+            </div>
+            <div class="mx-auto div_flex" style="margin-left: - 30px;">
+                                    <a th:href="${game.linkApp}" target="_blank">
+                        <img src="static/templates/images/btn_ios.png" alt="" class="m_image_2 mx-1" style="width:130px">
+                    </a>
+   			<a th:href="${game.linkCH}" target="_blank">
+                    <img src="static/templates/images/btn_gp.png" alt="" class="m_image_2 mx-1 " style="width:130px">
+                </a>
+                            </div>
+        </div>
+    </div>
+                                     
+  
+    
+    
+</div>
+<link rel="stylesheet" type="text/css" href="static/templates/vendor/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="static/templates/vendor/slick/slick-theme.css"/>
+<script type="text/javascript" src="static/templates/vendor/slick/slick.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.center').slick({
+            centerMode: true,
+            slidesToShow: 3,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.slick-prev')[0].style.zIndex += 1;
+    });
+
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  <svg hidden="hidden">
+    <defs>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <title>arrow-left</title>
+        <path
+          d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path
+          d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="foot" style="width: 100%; background-color: black;height: 530px;">
+    <div style="color: white;">
+      <img style="background-color: black;width: 100px;" src="img/logo.png">
+      <h1>ZEGO GLOBAL CO., LTD.</h1>
+      <p>Tầng 10, Tòa nhà Peak View, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+      <p> info@zegostudio.com</p>
+      <p>0948 147 999</p>
+       <a href="https://www.facebook.com/Zego-Global-114890267305601" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;margin-right: 10px;"><i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCa3exD52ixc5FSVMuo3XYxw/featured" style="background: white; color: black; display: inline-block;width: 50px;height: 50px;border-radius: 100px;text-align: center;padding-top: 10px;"><i class="fa fa-youtube-play" style="font-size: 30px;"></i></a>
+    </div>
+    <div>
+       <iframe src="https://maps.google.com/maps?q=Peak%20View%2C%2036%20Ho%C3%A0ng%20C%E1%BA%A7u%2C%20%C4%90%E1%BB%91ng%20%C4%90a%2C%20H%C3%A0%20N%E1%BB%99i%2C%20Vi%E1%BB%87t%20Nam&t=&z=17&ie=UTF8&iwloc=&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 3000); // Change image every 2 seconds
+    }
+    </script>
+</body>
+
+</html>
